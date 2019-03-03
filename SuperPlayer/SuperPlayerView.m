@@ -1624,9 +1624,10 @@ static UISlider * _volumeSlider;
 - (UIButton *)repeatBackBtn {
     if (!_repeatBackBtn) {
         _repeatBackBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_repeatBackBtn setImage:SuperPlayerImage(@"back_full") forState:UIControlStateNormal];
+        [_repeatBackBtn setImage:SuperPlayerImage(@"danmu") forState:UIControlStateNormal];
         [_repeatBackBtn addTarget:self action:@selector(controlViewBackAction:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_repeatBackBtn];
+        _repeatBackBtn.backgroundColor = [UIColor redColor];
         [_repeatBackBtn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).offset(15);
             make.top.equalTo(self).offset(15);
